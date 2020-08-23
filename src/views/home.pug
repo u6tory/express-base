@@ -1,4 +1,10 @@
 extends layouts/main
 
 block content
-  h1 Hello world
+  if (loggedUser)
+    h1 Logged in! Hello world!
+  else
+    a(href="/kakao") 
+      button.kakao-login 
+        i.fas.fa-comment
+        span 카카오 계정으로 로그인
